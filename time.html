@@ -1,0 +1,68 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>time</title></head>
+<body>
+<font size="10" color="black">time函数手册</font><p>
+	<hr>
+	<p><font size="6" color="black"><b>time</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;time.time()
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;一般用来计算程序运行的时间
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;import time<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;time_b = time.time()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;func()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;time_a = time.time()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;print(time_a - time_b)<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>clock</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;time.clock()
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;一般用来计算程序运行的时间，用的比time更多
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;import time<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;clock_b = time.clock()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;func()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;clock_a = time.clock()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;print(clock_a - clock_b)<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>strptime</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;time.strptime(string, format)
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;将字符串形式的时间转化成struct_time的时间表示
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;string：字符串形式的时间<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;format：格式字符串<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> import time<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> print(time.strptime('2018-07-02 13:07:54', '%Y-%m-%d %H:%M:%S'))<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;time.struct_time(tm_year=2018, tm_mon=7, tm_mday=2, tm_hour=13, tm_min=7, tm_sec=54, tm_wday=0, tm_yday=183, tm_isdst=-1)<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>sleep</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;time.sleep(seconds)
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;进程睡眠seconds秒
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;seconds：进程睡眠的时间<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;import time<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;time.sleep(3)<br>
+	</p>
+	<hr>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>matplotlib</title></head>
+<body>
+<font size="10" color="black">matplotlib函数手册</font><p>
+	<hr>
+	<p><font size="6" color="black"><b>scatter</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax=None, alpha=None, linewidths=None, verts=None, edgecolors=None, hold=None, data=None, **kwargs)
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;画散点图，便于查看数据的分类效果<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;x, y：待显示的数据<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;s：size，数据点的显示大小<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;c：color，数据点的显示颜色<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> import matplotlib<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> import matplotlib.pyplot as plt<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> fig = plt.figure()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> ax = fig.add_subplot(111)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> ax.scatter([0, 1], [0, 1], s=15, c='r')<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&ltmatplotlib.collections.PathCollection object at 0x00000154950A5DA0&gt<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> plt.show()<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>plot</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;plot(*args, **kwargs)
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;画折线图<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;label：给曲线取个名字<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> from matplotlib import pyplot as plt<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> x = [500, 1000, 1500, 2000, 2500, 3000]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> y1 = [4, 10, 17, 24, 45, 60]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> y2 = [11, 31, 64, 105, 170, 240]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> plt.xlabel('Number of categories')<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> plt.ylabel('Seconds for one iteration')<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> plt.plot(x, y2, 'ys-', label="CC-BiBTM")<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> plt.plot(x, y1, 'go-', label="Fast CC-BiBTM")<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> plt.legend()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> plt.show()<br>
+	</p>
+	<hr>
+</body>
+</html>

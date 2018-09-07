@@ -1,0 +1,28 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>csv</title></head>
+<body>
+<font size="10" color="black">csv函数手册</font><p>
+	<hr>
+	<p><font size="6" color="black"><b>reader</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;reader(csvfile, dialect='excel', **fmtparams)
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;读取csv文件
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;csvfile：一个可以迭代的对象<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;dialect：<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> import csv<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> with open('eggs.csv', newline='') as csvfile:<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;...     spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;...     for row in spamreader:<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;...         print(', '.join(row))<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;...         <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Spam, Spam, Spam, Spam, Spam, Baked Beans<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Spam, Lovely Spam, Wonderful Spam<br>
+	</p>
+	<hr>
+</body>
+</html>

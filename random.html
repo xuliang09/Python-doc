@@ -1,0 +1,59 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>random</title></head>
+<body>
+<font size="10" color="black">random函数手册</font><p>
+	<hr>
+	<p><font size="6" color="black"><b>randint</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;random.randint(a, b)<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;返回一个属于区间[a, b]的整数, 包括a和b<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;a, b：两个整数<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> import random<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> random.randint(1, 3)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;2<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> random.randint(1, 3)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;3<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> random.randint(1, 3)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>random</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;random.random()<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;返回一个属于区间[0, 1)的浮点数<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> import random<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> random.random()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;0.81332125135732<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>seed</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;random.seed(a=None, version=2)<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;设置一颗种子，同一颗种子下的随机数是一致的<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;a：种子数<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> import random<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> random.seed(2)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> random.random()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;0.9560342718892494<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> random.seed(2)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> random.random()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;0.9560342718892494<br>
+	</p>
+	<hr>
+</body>
+</html>

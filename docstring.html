@@ -1,0 +1,22 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>docstring</title></head>
+<body>
+<p><font size="12" color="black">docstring</font></p>
+<hr>
+<p><font size="6" color="black">pycharm推荐的方式</font></p>
+def cal_vec_dis(vector1, vector2):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    """<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    calculate distance between vector<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    <br>
+&nbsp;&nbsp;&nbsp;&nbsp;    :param vector1: fmt: list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    :param vector2: fmt: list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    :return: distance, fmt: double<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    :raises AssertionError: length of vector1 and vector2 not equal<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    """<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    assert len(vector1) == len(vector2)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    dis = 0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    for i in range(len(vector1)):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;        dis += math.pow(vector1[i] - vector2[i], 2)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    return math.sqrt(dis)<br>
+</body>
+</html>

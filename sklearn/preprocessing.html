@@ -1,0 +1,111 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>preprocessing</title></head>
+<body>
+<font size="10" color="black">sklearn.preprocessing函数手册</font><p>
+	<hr>
+	<p><font size="6" color="black"><b>scale</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;sklearn.preprocessing.scale(X, axis=0, with_mean=True, with_std=True, copy=True)
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Standardize a dataset along any axis, Center to the mean and component wise scale to unit variance
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;X：进行scale的数据<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;axis：取0或1。取0表示对于每个feature进行归一化，取1表示对每个sample进行归一化<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;with_mean：<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;with_std：<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;copy：<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> from sklearn import preprocessing<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> import numpy as np<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> X = np.array([[ 1., -1.,  2.],<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;...               [ 2.,  0.,  0.],<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;...               [ 0.,  1., -1.]])<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> X_scaled = preprocessing.scale(X)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> X_scaled <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;array([[ 0.  ..., -1.22...,  1.33...],<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;       [ 1.22...,  0.  ..., -0.26...],<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;       [-1.22...,  1.22..., -1.06...]])<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>StandardScaler</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;sklearn.preprocessing.StandardScaler(copy=True, with_mean=True, with_std=True)
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;与函数sklearn.preprocessing.scale功能一样，但其生成了一个对象，可以重复使用
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;copy：默认True。False表示直接改变原数据里面的内容<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;with_mean：<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;with_std：<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> from sklearn.preprocessing import StandardScaler<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> data = [[0, 0], [0, 0], [1, 1], [1, 1]]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> scaler = StandardScaler()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> print(scaler.fit(data))<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;StandardScaler(copy=True, with_mean=True, with_std=True)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> print(scaler.transform(data))<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[[-1. -1.]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[-1. -1.]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[ 1.  1.]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[ 1.  1.]]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> print(scaler.transform([[2, 2]]))<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[[ 3.  3.]]<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>MinMaxScaler</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;sklearn.preprocessing.StandardScaler(feature_range=(0, 1), copy=True)
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;可以将数据归一化到指定范围内
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;feature_range：默认(0, 1)。归一化后每个数据值的范围<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;copy：默认True。False表示直接改变原数据里面的内容<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> scaler = preprocessing.StandardScaler().fit(X)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> scaler<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;StandardScaler(copy=True, with_mean=True, with_std=True)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> scaler.mean_                                      <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;array([ 1. ...,  0. ...,  0.33...])<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> scaler.transform(X)                               <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;array([[ 0.  ..., -1.22...,  1.33...],<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;       [ 1.22...,  0.  ..., -0.26...],<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;       [-1.22...,  1.22..., -1.06...]])<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>>#可以直接使用训练集对测试集数据进行转换<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> scaler.transform([[-1.,  1., 0.]])                <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;array([[-2.44...,  1.22..., -0.26...]])<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>minmax_scale</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;sklearn.preprocessing.minmax_scale(X, feature_range=(0, 1), axis=0, copy=True)
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;可以将数据归一化到指定范围内
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;X：进行scale的数据<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;feature_range：默认(0, 1)。归一化后每个数据值的范围<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;copy：默认True。False表示直接改变原数据里面的内容<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;axis：取0或1。取0表示对于每个feature进行归一化，取1表示对每个sample进行归一化<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> from sklearn.preprocessing import minmax_scale <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> x = [0,1,2,3,4,5]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> minmax_scale(x)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;array([0. , 0.2, 0.4, 0.6, 0.8, 1. ])<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> y = [[0,0,0],[1,1,1],[2,2,2]]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> minmax_scale(y)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;array([[0. , 0. , 0. ],<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;       [0.5, 0.5, 0.5],<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;       [1. , 1. , 1. ]])<br>
+	</p>
+	<hr>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>list</title></head>
+<body>
+<font size="10" color="black">list函数手册</font><p>
+	<hr>
+	<p><font size="6" color="black"><b>append</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;list.append(obj)
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;向列表末尾添加一个元素
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;obj：添加到列表末尾的对象
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;该方法无返回值，但是会修改原来的列表<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a = []<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.append(1)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[1]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.append(2)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[1, 2]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>><br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>count</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;list.count(obj)
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;统计某个元素在列表中出现的次数
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;obj：列表中统计的对象
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;返回元素在列表中出现的次数<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[1, 2]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.append(3)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.append(3)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[1, 2, 3, 3]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.count(2)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.count(3)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;2<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>extend</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;list.extend(seq)
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;用于在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;seq：元素列表
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;该方法没有返回值，但会在已存在的列表中添加新的列表内容<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[1, 2, 3, 3]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.extend([4, 5])<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[1, 2, 3, 3, 4, 5]<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>index</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;list.index(obj)
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;用于从列表中找出某个值第一个匹配项的索引位置
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;obj：查找的对象
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;该方法返回查找对象的索引位置，如果没有找到对象则抛出异常<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[1, 2, 3, 3, 4, 5]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.index(3)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;2<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.index(6)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Traceback (most recent call last):<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;  File &quot;&ltstdin&gt&quot;, line 1, in &ltmodule&gt<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;ValueError: 6 is not in list<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>insert</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;list.insert(index, obj)
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;用于将指定对象插入列表的指定位置
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;index：对象 obj 需要插入的索引位置<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;obj：要插入列表中的对象<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;该方法没有返回值，但会在列表指定位置插入对象<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[1, 2, 3, 3, 4, 5]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.insert(4, 0)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[1, 2, 3, 3, 0, 4, 5]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>><br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>pop</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;list.pop([index=-1])
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;用于移除列表中的一个元素（默认最后一个元素），并且返回该元素的值
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;index：可选参数，要移除列表元素的下标<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;该方法返回从列表中移除的元素对象<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[1, 2, 3, 3, 0, 4, 5]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.pop()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;5<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.pop(0)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[2, 3, 3, 0, 4]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.pop(1000)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Traceback (most recent call last):<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;  File "&ltstdin&gt", line 1, in &ltmodule&gt<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;IndexError: pop index out of range<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>remove</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;list.remove(obj)
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;用于移除列表中某个值的第一个匹配项
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;obj：列表中要移除的对象。<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;该方法没有返回值但是会移除列表中的某个值的第一个匹配项<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[2, 3, 3, 0]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.remove(3)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[2, 3, 0]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.remove(0)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[2, 3]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.remove(0)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Traceback (most recent call last):<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;File "&lt input &gt", line 1, in &lt module &gt<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;ValueError: list.remove(x): x not in list<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>reverse</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;list.reverse()
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;用于反向列表中元素
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;无<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;该方法没有返回值，但是会对列表的元素进行反向排列<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[2, 3]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.reverse()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[3, 2]<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>sort</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;list.sort([func])
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;用于对原列表进行排序，如果指定参数，则使用比较函数指定的比较函数
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;func：可选参数, 如果指定了该参数会使用该参数的方法进行排序<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;该方法没有返回值，但是会对列表的对象进行排序<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[3, 2, 1]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a.sort()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[1, 2, 3]<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>生成二维矩阵</b><br></font></p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;# 生成一个m*n的矩阵<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;m = 5<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;n = 6<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;l = [[0 for i in range(n)] for i in range(m)]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;l[4][0] = 1<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;print(l)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;# 不能用[[]]*m，这是浅拷贝<br>
+	</p>
+	<hr>
+</body>
+</html>

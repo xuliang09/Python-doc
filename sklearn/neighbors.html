@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>neighbors</title></head>
+<body>
+<font size="10" color="black">sklearn.neighbors函数手册</font><p>
+	<hr>
+	<p><font size="6" color="black"><b>KNeighborsClassifier</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;sklearn.neighbors.KNeighborsClassifier(n_neighbors=5, weights=’uniform’, algorithm=’auto’, leaf_size=30, p=2, metric=’minkowski’, metric_params=None, n_jobs=1, **kwargs)
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;K近邻算法
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;n_neighbors：K的大小<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> X = [[0], [1], [2], [3]]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> y = [0, 0, 1, 1]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> from sklearn.neighbors import KNeighborsClassifier<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> neigh = KNeighborsClassifier(n_neighbors=3)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> neigh.fit(X, y) <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;KNeighborsClassifier(...)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> print(neigh.predict([[1.1]]))<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[0]<br>
+	</p>
+	<hr>
+</body>
+</html>

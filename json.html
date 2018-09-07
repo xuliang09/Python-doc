@@ -1,0 +1,77 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>json</title></head>
+<body>
+<font size="10" color="black">json函数手册</font><p>
+	<hr>
+	<p><font size="6" color="black"><b>dumps</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;json.dumps(obj)<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;将一个对象转化成一个字符串<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;obj：符合json格式的对象<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> data = [ { 'a' : 1, 'b' : 2, 'c' : 3, 'd' : 4, 'e' : 5 } ]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> data<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> import json<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> json.dumps(data)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'[{"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}]<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>dump</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;json.dump(obj, fp)<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;将一个对象序列化并存储到文件中<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;obj：符合json格式的对象<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;fp：文件的句柄<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> data = [ { 'a' : 1, 'b' : 2, 'c' : 3, 'd' : 4, 'e' : 5 } ]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> data<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> json.dump(data, open('a.txt', 'w'))<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>loads</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;json.loads(obj)<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;将字符串转化成一个json对象<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;obj：符合json格式的对象<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'[{"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}]'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> ds = json.loads(s)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> ds<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}]<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>loads</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;json.load(fp)<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;从文件中读取一个json对象<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;fp：文件的句柄<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> ds = json.load(open('a.txt'))<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> ds<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}]<br>
+	</p>
+	<hr>
+</body>
+</html>

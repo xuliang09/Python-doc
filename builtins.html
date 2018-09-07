@@ -1,0 +1,57 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>builtins</title></head>
+<body>
+<font size="10" color="black">builtins函数手册</font><p>
+	<hr>
+	<p><font size="6" color="black"><b>input</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;input([prompt])
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;prompt：提示用户的字符串<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;接受标准输入流的字符串<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a = input('input a integer\n')<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> print(int(a))<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;input a integer<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;2<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;2<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>map</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;map(func, iter)
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;func：应用到iter上的函数<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;iter：可迭代的对象<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;对iter中的每个元素应用func<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s = ['1', '2', '3']<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> map(int, s)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt map object at 0x0000025D905E94A8 &gt<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> list(map(int, s))<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[1, 2, 3]<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>while和for</b><br></font></p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;写一下while和for后面接else的情况，一句话：只要不执行break就运行else<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;i=1<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;while i &lt 10:<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i+=1<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# break，这个地方如果执行了break，else里面的内容就不会执行<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('i am here')<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;OUT[1]: i am here<br>
+	</p>
+	<hr>
+</body>
+</html>

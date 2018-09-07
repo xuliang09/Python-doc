@@ -1,0 +1,360 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>str</title></head>
+<body>
+<font size="10" color="black">str函数手册</font><p>
+	<hr>
+	<p><font size="6" color="black"><b>capitalize</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str.capitalize()<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;将字符串的第一个字母变成大写,其他字母变小写<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;无<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;该方法返回一个首字母大写的字符串<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>>s = 'a, B'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.capitalize()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'A, b'<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>center</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str.center(width[, fillchar])<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;返回一个原字符串居中,并使用空格填充至长度 width 的新字符串。默认填充字符为空格。<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;width：字符串的总宽度<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;fillchar：填充字符<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;该方法返回一个原字符串居中,并使用空格填充至长度 width 的新字符串<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>>str = 'runoob'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> str.center(20, '*')<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'*******runoob*******'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> str.center(10)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'&nbsp;&nbsp;runoob&nbsp;&nbsp;'<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>count</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str.count(sub, start= 0,end=len(string))<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;用于统计字符串里某个字符出现的次数。可选参数为在字符串搜索的开始与结束位置<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;sub：搜索的子字符串<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;start：字符串开始搜索的位置。默认为第一个字符,第一个字符索引值为0<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;end：字符串中结束搜索的位置。字符中第一个字符的索引为 0。默认为字符串的最后一个位置<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;该方法返回子字符串在字符串中出现的次数<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s = 'abcdefg'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.count('abc')<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.count('abc', 1)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;0<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>find</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str.find(str, beg=0, end=len(string))<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;检测字符串中是否包含子字符串 str ，如果指定 beg（开始） 和 end（结束） 范围，则检查是否包含在指定范围内，如果包含子字符串则返回第一次出现的索引值，否则返回-1。<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str：指定检索的字符串<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;beg：开始索引，默认为0<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;end：结束索引，默认为字符串的长度<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;如果包含子字符串返回开始的索引值，否则返回-1。<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s = 'this is good'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.find('is')<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;2<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.find('isn')<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;-1<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>index</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str.index(str, beg=0, end=len(string))<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;检测字符串中是否包含子字符串 str ，如果指定 beg（开始） 和 end（结束） 范围，则检查是否包含在指定范围内，该方法与 python find()方法一样，只不过如果str不在 string中会报一个异常。<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str：指定检索的字符串<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;beg：开始索引，默认为0<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;end：结束索引，默认为字符串的长度<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;如果包含子字符串返回开始的索引值，否则返回-1。<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s = 'abcdefg'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.index('bc')<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.index('bca')<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Traceback (most recent call last):<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;  File "&ltstdin&gt", line 1, in &ltmodule&gt<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;ValueError: substring not found<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>format</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str.format(*args, **kwargs)<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Return a formatted version of S, using substitutions from args and kwargs. The substitutions are identified by braces ('{' and '}').<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;args：位置参数<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;kwargs：关键词参数<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;返回格式化之后的字符串<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> "网站名：{0}，地址：{1}".format("菜鸟教程", "www.runoob.com")<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'网站名：菜鸟教程，地址：www.runoob.com'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> "网站名：{name}，地址：{addr}".format(name="菜鸟教程", addr="www.runoob.com")<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'网站名：菜鸟教程，地址：www.runoob.com'<br>
+	</p>
+	<p><b>其它</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;format还支持传对象，如'value 为: {0.value}'.format(obj)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;format还可以在'{'、'}'中控制小数的位数<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>join</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str.join(sequence)<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;用于将序列中的元素以指定的字符连接生成一个新的字符串<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;sequence：要连接的元素序列<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;返回通过指定字符连接序列中元素后生成的新字符串<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> '__'.join(['a', 'b', 'c'])<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'a__b__c'<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>split</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str.split(sep=None, maxsplit=-1)<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;通过指定分隔符对字符串进行切片，如果参数 num 有指定值，则仅分隔 num 个子字符串<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;sep：分隔符，默认为所有的空字符，包括空格、换行(\n)、制表符(\t)等。<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;maxsplit：分割次数。<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;返回分割后的字符串列表。<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> str<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'Line1-abcdef \nLine2-abc \nLine4-abcd'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> str.split()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;['Line1-abcdef', 'Line2-abc', 'Line4-abcd']<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> str.split(maxsplit=1)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;['Line1-abcdef', 'Line2-abc \nLine4-abcd']<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>rfind</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str.rfind(sub[, start[, end]])<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;返回字符串最后一次出现的位置(从右向左查询)，如果没有匹配项则返回-1。<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;sub：查找的字符串<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;start：开始查找的位置，默认为 0<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;end：结束查找位置，默认为字符串的长度<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;返回字符串最后一次出现的位置，如果没有匹配项则返回-1<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s[0:4]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'this'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s[0:3]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'thi'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.rfind('is', 0, 4)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;2<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.rfind('is', 0, 3)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;-1<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>rindex</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str.rindex(sub[, start[, end]])<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;返回子字符串 sub 在字符串中最后出现的位置，如果没有匹配的字符串会报异常，你可以指定可选参数[beg:end]设置查找的区间<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;sub：查找的字符串<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;start：开始查找的位置，默认为 0<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;end：结束查找位置，默认为字符串的长度<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;返回子字符串 sub 在字符串中最后出现的位置，如果没有匹配的字符串会报异常<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s[0:4]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'this'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s[0:3]<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'thi'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.rindex('is', 0, 3)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Traceback (most recent call last):<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;  File "&ltstdin&gt", line 1, in &ltmodule&gt<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;ValueError: substring not found<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.rindex('is', 0, 4)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;2<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>replace</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str.replace(old, new[, count])<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;把字符串中的 old（旧字符串） 替换成 new(新字符串)，如果指定第三个参数count，则替换不超过count次<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;old：将被替换的子字符串。<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;new：新字符串，用于替换old子字符串。<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;count：可选字符串, 替换不超过count次<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;返回字符串中的 old（旧字符串） 替换成 new(新字符串)后生成的新字符串，如果指定第三个参数count，则替换不超过count次<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'this is good'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.replace('is', 'was')<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'thwas was good'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.replace('is', 'was', 1)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'thwas is good'<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>startswith</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str.startswith(prefix[, start[, end]])<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;用于检查字符串是否是以指定子字符串开头，如果是则返回 True，否则返回 False。如果参数 start 和 end 指定值，则在指定范围内检查<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;prefix：检测的字符串<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;start：可选参数用于设置字符串检测的起始位置<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;end：可选参数用于设置字符串检测的结束位置<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;如果检测到前缀字符串则返回True，否则返回False<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'this is good'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.startswith('is')<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;False<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.startswith('this')<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;True<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.startswith('is', 2, 4)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;True<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.startswith('this', 2, 4)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;False<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>endswith</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str.endswith(suffix[, start[, end]])<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;用于判断字符串是否以指定后缀结尾，如果以指定后缀结尾返回True，否则返回False。可选参数 start 与 end 为检索字符串的开始与结束位置<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;suffix：检测的字符串<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;start：可选参数用于设置字符串检测的起始位置<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;end：可选参数用于设置字符串检测的结束位置<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;如果字符串含有指定的后缀返回True，否则返回False<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'this is good'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.endswith('od')<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;True<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>lstrip</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str.lstrip([chars])<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;用于截掉字符串左边的空白符或指定字符<br>
+	</p>
+	<p><b>参数</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;chars：指定截取的字符<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;返回截掉字符串左边的空白符或指定字符后生成的新字符串<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>rstrip</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str.rstrip([chars])<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;用于截掉字符串右边的空白符或指定字符<br>
+	</p>
+	<p><b>参数</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;chars：指定截取的字符<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;返回截掉字符串右边的空白符或指定字符后生成的新字符串<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>strip()</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;str.strip([chars])<br>
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;用于移除字符串头尾指定的字符（默认为空白符）<br>
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;char：移除字符串头尾指定的字符<br>
+	</p>
+	<p><b>返回值</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;返回移除字符串头尾指定的字符生成的新字符串<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'\t&nbsp;this is good&nbsp;'<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s.strip()<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;'this is good'<br>
+	</p>
+	<hr>
+</body>
+</html>

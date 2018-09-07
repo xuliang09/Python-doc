@@ -1,0 +1,132 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>set</title></head>
+<body>
+<font size="10" color="black">set函数手册</font><p>
+	<hr>
+	<p><font size="6" color="black"><b>集合遍历</b><br></font></p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a = {1, 2}<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> for i in a:<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> &nbsp;&nbsp;&nbsp;&nbsp;print(i)<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>|</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;set() | set()
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;求两个集合的并集
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;两个集合
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a = {1, 2, 3}<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> b = {1, 2, 4}<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a | b<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;{1, 2, 3, 4}<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>-</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;set() - set()
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;求两个集合的差集
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;两个集合
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a = {1, 2, 3}<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> b = {1, 2, 4}<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a - b<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;{3}<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> b - a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;{4}<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>&</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;set() & set()
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;求两个集合的交集
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;两个集合
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a = {1, 2, 3}<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> b = {1, 2, 4}<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a & b<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;{1, 2}<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>!=</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;set() != set()
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;判断两个集合的元素是否不一样
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;两个集合
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a = {1, 2}<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> b = {1, 2}<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a != b<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;False<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>==</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;set() == set()
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;判断两个集合的元素是否一样
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;两个集合
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a = {1, 2}<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> b = {1, 2}<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a == b<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;True<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>in</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;a in set()
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;元素a是否在集合中
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;一个元素，一个集合
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a = {1, 2}<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> 1 in a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;True<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>not in</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;a not in set()
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;元素a是否不在集合中
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;一个元素，一个集合
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> a = {1, 2}<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> 1 not in a<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;False<br>
+	</p>
+	<hr>
+</body>
+</html>

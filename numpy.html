@@ -1,0 +1,55 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>numpy</title></head>
+<body>
+<font size="10" color="black">numpy函数手册</font><p>
+	<hr>
+	<p><font size="6" color="black"><b>tile</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;tile(A, reps)
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;重复A，次数为reps
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;A：<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;reps：<br>
+	</p>
+	<p><b>例子</b>
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;>>> a = np.array([0, 1, 2])		</br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> np.tile(a, 2)				<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;array([0, 1, 2, 0, 1, 2])		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> np.tile(a, (2, 2))			<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;array([[0, 1, 2, 0, 1, 2],		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[0, 1, 2, 0, 1, 2]])			<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> np.tile(a, (2, 1, 2))		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;array([[[0, 1, 2, 0, 1, 2]],	<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;[[0, 1, 2, 0, 1, 2]]])			<br>
+	</p>
+	<hr>
+	<p><font size="6" color="black"><b>zeros</b><br></font></p>
+	<p><b>语法</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;zeros(shape, dtype=float, order='C')
+	</p>
+	<p><b>功能</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;一个给定形状和类型的用0填充的array
+	</p>
+	<p><b>参数</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;shape：形状<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;dtype：数据类型，可选参数，默认numpy.float64<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;order：可选参数，C代表与c语言类似，行优先；F代表列优先<br>
+	</p>
+	<p><b>例子</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> np.zeros(5)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;array([ 0.,  0.,  0.,  0.,  0.])<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> np.zeros((5,), dtype=np.int)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;array([0, 0, 0, 0, 0])<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> np.zeros((2, 1))<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;array([[ 0.], [ 0.]])<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> s = (2,2)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> np.zeros(s)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;array([[ 0., 0.], [ 0., 0.]])<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;>>> np.zeros((2,), dtype=[('x', 'i4'), ('y', 'i4')]) # custom dtype<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;array([(0, 0), (0, 0)], dtype=[('x', '&lti4'), ('y', '&lti4')])<br>
+	</p>
+	<hr>
+</body>
+</html>
